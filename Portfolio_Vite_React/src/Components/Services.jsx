@@ -1,6 +1,5 @@
-import React form 'react';
 
-const About = () => {
+const Services = () => {
         return (
             <div>
             
@@ -8,4 +7,4 @@ const About = () => {
         );
 };
 
-export default About;
+export default Services;
