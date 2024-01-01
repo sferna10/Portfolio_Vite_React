@@ -1,0 +1,39 @@
+export const projects = [
+  {
+    imageURL: "images/Coding_Quiz.png",
+    name: "Coding Quiz Challenge",
+    description:
+      "Application to test your knowledge on coding"
+    projectURL: "https://"https://sferna10.github.io/Quiz_Challenge/,
+    projectSrc: "https://github.com/sferna10/Quiz_Challenge",
+  },
+
+  {
+    imageURL: "images/Professional_Portfolio.png",
+    name: "Professional Portfolio",
+    description: Professional Portfolio using HTML and CSS
+      "This application was created using JavaScript, HTML and CSS",
+    tech: ["html", "css", "javascript"],
+    projectURL: "https://"https://sferna10.github.io/Portfolio_HTML-CSS//,
+    projectSrc: "https://github.com/sferna10/Portfolio_HTML-CSS"
+  },  
+  {
+    imageURL: "images/Work_Day_Scheduler.png",
+    name: "Work_Day_Scheduler.png",
+    description: "Calendar application that allow user to save events to each hour of a typical working day.",
+    tech: ["html", "css", "javascript"],
+    projectURL: "https://https://sferna10.github.io/Work_Day_Scheduler//",
+    projectSrc: "https://https://github.com/sferna10/Work_Day_Scheduler/settings/pages",
+  },
+
+
+];
+
+export const skills = [
+  {icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain-wordmark.svg", name: "HTML"},
+  {icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain-wordmark.svg", name:  "CSS"},
+  {icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg", name: "Tailwind"},
+  {icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg", name: "JavaScript"},
+  {icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", name: "React"},
+  {icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg", name: "MySQL"},
+];

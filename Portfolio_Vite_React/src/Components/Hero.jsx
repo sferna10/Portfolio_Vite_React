@@ -1,33 +1,46 @@
-import heroImg from '../assets/hero.svg';
-import { FaGithubSquare, FaLinkedin, } from 'react-icons/fa';
+import Typed from 'typed.js';
+import React, { useEffect, useRef } from 'react';
+// import backgroundImage from '/images/watercolor.png';
 
 const Hero = () => {
+  const el = useRef(null);
+
+  useEffect(() => {
+  const typed = new Typed(el.current, {
+    strings: ['Software Engineer', 'Full Stack Developer', 'Frontend Developer', 'Backend Developer'],
+    typeSpeed: 50,
+    loop: true,
+  });
+
+  return () => {
+    typed.destroy();
+  };
+}, []);
+
   return (
-    <div className='bg-emerald-100 py-24'>
-      <div className='align-element grid md:grid-cols-2 items-center gap-8'>
-        <article>
-          <h1 className='text-7xl font-bold tracking-wider'>Silvia Fernandez</h1>
-          <p className='mt-4 text-3xl text-slate-700 capitalize tracking-wide'>
-            Full Stalk Developer
+    <div className="w-11/12 h-5/6 p-5 mb-8 flex-col items-start justify-start flex border-secondary shadow-[0_60px_50px_-40px_rgba(0,128,128,0.3)] ">
+      <div className="w-2/3 max-sm:w-full  text-pink-400 md:w-full lg:w-2/3 p-5 flex flex-col items-center grow font-agbalumo">
+        <div className="h-fit w-full mt-16">
+          <p className="text-4xl md:text-4xl max-sm:text-3xl w-fit font-bold">
+             Silvia Fernandez
+              I am a Full Stack Web Designer<br /> <span ref={el} />
           </p>
-          <p className='mt-2 text-lg text-slate-700 capitalize tracking-wide'>
-            
-          </p>
-          <div className='flex gap-x-4 mt-4'>
-            <a href='#'>
-              <FaGithubSquare className='h-8 w-8 text-slate-500 hover:text-black duration-300' />
-            </a>
-            <a href='#'>
-              <FaLinkedin className='h-8 w-8 text-slate-500 hover:text-black duration-300' />
-            </a>
-         
-          </div>
-        </article>
-        <article className='hidden md:block'>
-          <img src={heroImg} className='h-80 lg:h-96' />
-        </article>
+        </div>
+        <p className="w-full py-5 text-xl  text-justify text-neutral-50 grow font-texturina ">
+            This is my Professional Portfolio
+        </p>
       </div>
+      <button className=" transition-all my-3  w-full h-16 text-neutral-50 bg-secondary  hover:bg-pink-400 hover:text-neutral-50 font-lobster text-2xl">
+        <a
+          href=""
+          download=""
+          target="blank"
+        >
+          Get my resume
+        </a>
+      </button>
     </div>
   );
 };
+
 export default Hero;

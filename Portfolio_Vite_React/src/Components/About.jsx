@@ -1,33 +1,46 @@
-import heroImg from '../assets/hero.svg';
-import { FaGithubSquare, FaLinkedin, FaTwitterSquare } from 'react-icons/fa';
-
-const Hero = () => {
+import { skills } from "../constants";
+const About = () => {
   return (
-    <div className='bg-emerald-100 py-24'>
-      <div className='align-element grid md:grid-cols-2 items-center gap-8'>
-        <article>
-          <h1 className='text-7xl font-bold tracking-wider'>Professiona Portfolio</h1>
-          <p className='mt-4 text-3xl text-slate-700 capitalize tracking-wide'>
-            Full Stalk Developer
-          </p>
-          <p className='mt-2 text-lg text-slate-700 capitalize tracking-wide'>
-            Transforming ideas into Web pages
-          </p>
-          <div className='flex gap-x-4 mt-4'>
-            <a href='#'>
-              <FaGithubSquare className='h-8 w-8 text-slate-500 hover:text-black duration-300' />
-            </a>
-            <a href='#'>
-              <FaLinkedin className='h-8 w-8 text-slate-500 hover:text-black duration-300' />
-            </a>
-          
+    // <div
+    //   id="about"
+    //   className="w-auto max-sm:w-full flex flex-wrap max-sm:flex-col items-center justify-center border-solid border-2 border-secondary rounded-md p-3"
+    // >
+      <div className="flex flex-col max-sm:w-full text-justify md:w-2/3 items-start justify-center  p-10 rounded-lg shadow-[0_60px_50px_-40px_rgba(0,128,128,0.3)]">
+        <div className="flex w-full gap-5 max-sm:flex-col">
+          <div className="w-full">
+            <span className="text-white-400 text-3xl font-agbalumo font-bold">About Me</span>
+            <p className="text-neutral-50 w-full py-3 font-medium font-texturina">
+              I am a Full Stalk Web Designer that can help ypu with my knowledge in most popular frameworks and creativity to design an attractive and functional website </p>
           </div>
-        </article>
-        <article className='hidden md:block'>
-          <img src={heroImg} className='h-80 lg:h-96' />
-        </article>
+
+          <div className="max-sm:w-full md:w-full h-full">
+            <span className="text-pink-400 text-3x font-agbalumo font-bold">Skills</span>
+            <div className="grid grid-rows-4 grid-cols-2 grid-flow-col w-full py-3 h-full">
+              {skills.map((element, index) => {
+                return (
+                  <div key={index} className="flex gap-2 items-center w-full p-3">
+                    <img src={element.icon} alt="" className="w-10 h-10" />
+                    <span className="text-neutral-50">{element.name}</span>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+        <button
+              type="button"
+              className="transition-all my-3  w-full h-16 text-neutral-50 bg-secondary hover:bg-pink-400 hover:text-neutral-50 "
+            >
+              <a
+                href="#contact"
+                className="w-38 h-18 px-6 py-4 rounded-lg border-2 border-transparent font-lobster text-2xl text-center transition-all  "
+              >
+                Contact Me
+              </a>
+            </button>
       </div>
-    </div>
+    // </div>
   );
 };
-export default Hero;
+
+export default About;

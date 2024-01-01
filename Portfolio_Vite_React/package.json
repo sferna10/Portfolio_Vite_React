@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^6.5.1",
+    "@googleapis/docs": "^3.0.0",
     "@react-icons/all-files": "^4.1.0",
     "aos": "^3.0.0-beta.6",
     "nanoid": "^5.0.4",
